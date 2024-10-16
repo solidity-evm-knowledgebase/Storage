@@ -1,6 +1,6 @@
 # Storage
 
-```
+```solidity
 contract FunWithStorage {
   uin256 favoriteNumber;
   bool someBool;
@@ -30,7 +30,7 @@ data --> fixed size array of 3 32bytes item, each take a storage slot; in this c
 flatenning + domination + awkardness --> storage slot 9; where flattening (uint8): 1 byte, value = 0x0A. denomination (uint8): 1 byte, value = 0xFF. awkwardness (uint16): 2 bytes, value = 0x3B60 (15200 in decimal). Remaining 28 bytes are empty or zero.
 
 
-```
+```solidity
 function doStuff() public {
 uint256 newVar = favoriteNumber + 1;
 uint256 otherVar = 7;
