@@ -25,9 +25,9 @@ NOT_IN_STORAGE --> not in storage, saved in the contract's bytecode due to "cons
 
 balance(0x23d3957BE879aBa6ca925Ee4F072d1A8C4E8c890) --> keccak256(abi.encodePacked(key, p)) where key is the address in this case (0x23d3957BE879aBa6ca925Ee4F072d1A8C4E8c890); and p is the slot where the mapping itself is stored, in this case 3;
 
-data --> fixed size array of 3 32bytes item, each take a storage slot; in this case they slots: 6, 7, 8.
+data --> fixed size array of 3 32bytes item, each take a storage slot; in this case they slots: 4, 5, 6.
 
-flatenning + domination + awkardness --> storage slot 9; where flattening (uint8): 1 byte, value = 0x0A. denomination (uint8): 1 byte, value = 0xFF. awkwardness (uint16): 2 bytes, value = 0x3B60 (15200 in decimal). Remaining 28 bytes are empty or zero.
+flatenning + domination + awkardness --> storage slot 7; where flattening (uint8): 1 byte, value = 0x0A. denomination (uint8): 1 byte, value = 0xFF. awkwardness (uint16): 2 bytes, value = 0x3B60 (15200 in decimal). Remaining 28 bytes are empty or zero.
 
 
 ```solidity
