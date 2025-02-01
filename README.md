@@ -19,7 +19,7 @@ someBool --> storage slot 1;
 
 myArray length --> storage slot 2;
 
-myArray[2] --> storage slot keccak256(2) + 2.  dynamic array’s elements are stored starting from keccak256(slot) where slot the location where the array's length is stored. (in this case 2).
+myArray[2] --> storage slot keccak256(2) + 1.  dynamic array’s elements are stored starting from keccak256(slot) where slot the location where the array's length is stored. (in this case 2).
 
 NOT_IN_STORAGE --> not in storage, saved in the contract's bytecode due to "constant" keyword. Constant and Immutable keywords do not take a slot in storage.
 
