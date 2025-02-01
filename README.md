@@ -23,7 +23,7 @@ myArray[2] --> storage slot keccak256(2) + 1.  dynamic array’s elements are st
 
 NOT_IN_STORAGE --> not in storage, saved in the contract's bytecode due to "constant" keyword. Constant and Immutable keywords do not take a slot in storage.
 
-balance(0x23d3957BE879aBa6ca925Ee4F072d1A8C4E8c890) --> keccak256(abi.encodePacked(key, p)) where key is the address in this case (0x23d3957BE879aBa6ca925Ee4F072d1A8C4E8c890); and p is the slot where the mapping itself is stored, in this case 5;
+balance(0x23d3957BE879aBa6ca925Ee4F072d1A8C4E8c890) --> keccak256(abi.encodePacked(key, p)) where key is the address in this case (0x23d3957BE879aBa6ca925Ee4F072d1A8C4E8c890); and p is the slot where the mapping itself is stored, in this case 3;
 
 data --> fixed size array of 3 32bytes item, each take a storage slot; in this case they slots: 6, 7, 8.
 
