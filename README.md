@@ -27,7 +27,7 @@ balance(0x23d3957BE879aBa6ca925Ee4F072d1A8C4E8c890) --> keccak256(abi.encodePack
 
 data --> fixed size array of 3 32bytes item, each take a storage slot; in this case they slots: 4, 5, 6.
 
-flatenning + domination + awkardness --> storage slot 7; where flattening (uint8): 1 byte, value = 0x0A. denomination (uint8): 1 byte, value = 0xFF. awkwardness (uint16): 2 bytes, value = 0x3B60 (15200 in decimal). Remaining 28 bytes are empty or zero.
+flatenning + domination + awkardness --> storage slot 7; where flattening (uint8): 1 byte, value = 0x0A. denomination (uint8): 1 byte, value = 0xFF. awkwardness (uint16): 2 bytes, value = 0x3B60 (15200 in decimal). Remaining 28 bytes are or zeroes (padding).
 
 
 ```solidity
