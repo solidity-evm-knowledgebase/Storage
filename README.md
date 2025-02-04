@@ -37,6 +37,8 @@ uint256 otherVar = 7;
 }
 ```
 
-Variables in functions are saved in memory and are only available for the duration of the function call.
+Variables in functions are saved in stack/memory and are only available for the duration of the function call.
 
 Strings are treated as technically a dynamic sized array, so we need to precise the "memory" keyword.
+
+Note: ```constant``` and ```immutable``` keywords restrict modificaction of a state variable. The difference is that ```constant``` variables can never be changed after compilation, while ```immutable``` variables can be set within the constructor.
