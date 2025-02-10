@@ -29,6 +29,11 @@ data --> fixed size array of 3 32bytes item, each take a storage slot; in this c
 
 flatenning + domination + awkardness --> storage slot 7; where flattening (uint8): 1 byte, value = 0x0A. denomination (uint8): 1 byte, value = 0xFF. awkwardness (uint16): 2 bytes, value = 0x3B60 (15200 in decimal). Remaining 28 bytes are or zeroes (padding).
 
+```solidity
+mapping(uint256 => mapping (address => bool)) s;
+```
+keccak256(abi.encodePacked(Key1, keccak256(abi.encodePacked(Key2, p)))
+
 
 ```solidity
 function doStuff() public {
