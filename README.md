@@ -19,6 +19,8 @@ contract FunWithStorage {
   uint16 private awkwardness = uint16(block.timestamp);
 
   Player private thePlayer;
+
+  uint64[] someDynamicArray;
 }
 ```
 favoriteNumber --> storage slot 0;
@@ -40,6 +42,8 @@ flatenning + domination + awkardness --> storage slot 7; where flattening (uint8
 playerId --> storage slot 8
 uint256 score --> storage slot 9
 ==> defining a struct in Solidity does not take up a storage slot space until it is declared 
+
+someDynamicArray --> at storage slot kecca256(10), we will have 4 uint64 concatenated from right to left
 
 ```solidity
 mapping(uint256 => mapping (address => bool)) s;
