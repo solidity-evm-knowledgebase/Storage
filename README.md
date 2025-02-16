@@ -2,6 +2,12 @@
 
 ```solidity
 contract FunWithStorage {
+  struct Player {
+        address playerId;
+        uint256 score;
+        uint256 level;
+    }
+
   uin256 favoriteNumber;
   bool someBool;
   uint256[] myArray;
@@ -11,6 +17,8 @@ contract FunWithStorage {
   uint8 private flattening = 10;
   uint8 private denomination = 255;
   uint16 private awkwardness = uint16(block.timestamp);
+
+  Player private thePlayer;
 }
 ```
 favoriteNumber --> storage slot 0;
@@ -28,6 +36,10 @@ balance(0x23d3957BE879aBa6ca925Ee4F072d1A8C4E8c890) --> keccak256(abi.encodePack
 data --> fixed size array of 3 32bytes item, each take a storage slot; in this case they slots: 4, 5, 6.
 
 flatenning + domination + awkardness --> storage slot 7; where flattening (uint8): 1 byte, value = 0x0A. denomination (uint8): 1 byte, value = 0xFF. awkwardness (uint16): 2 bytes, value = 0x3B60 (15200 in decimal). Remaining 28 bytes are or zeroes (padding).
+
+playerId --> storage slot 8
+uint256 score --> storage slot 9
+==> defining a struct in Solidity does not take up a storage slot space until it is declared 
 
 ```solidity
 mapping(uint256 => mapping (address => bool)) s;
